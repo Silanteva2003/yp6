@@ -1,1140 +1,718 @@
 @font-face {
-    font-family: "Poppins";
-    src: url("../fonts/Poppins-Regular.ttf") format("truetype");
+    font-family: "Karla";
+    src: url("../fonts/Karla-ExtraBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Karla";
+    src: url("../fonts/Karla-Regular.ttf") format("truetype");
     font-style: normal;
     font-weight: 400;
 }
 body{
-    font-family: Poppins;
+    font-family: 'Karla';
     font-weight: 400;
 }
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    }
-    
-    /*ШАПКА*/
-    .header{
-    background-color: rgb(255, 255, 255);
-    height: 66px;
-    width: 1200px;
+}
+/* Header */
+.header{
+    height: 80px;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0;
     margin: 0 auto;
-    position: fixed;   
-    z-index: 100;  
-    width: 100%; 
-    }
-    .container {
-    width: 1200px;
-    margin: 0 auto;
-    }
-    .wrapper{
+    background: #FFFFFF;
+}
+/* Сделала настройки для блока header */
+.header__wrapper{
     display: flex;
-    justify-content: space-between;
+    width: 1200px;
     align-items: center;
-    background-color: rgb(255, 255, 255);
-    margin-top: 10px;
-    }
-    .logo{
-    border-radius: 0px;
-    }
-    .nav{
-    height: 46px;
-    width: 403px;
-    }
-    .main_menu{
+    margin: 0 auto;
+}
+.nav{
+    height: 30px;
+    margin-left: 97px;
+}
+.main_menu{
     display: flex;
     list-style: none;
-    color: #444444;
-    }
-    .menu_link{
-    margin: 6px 20px 0 13px;
-    }
-    .menu_link a{
-    font-family: 'Poppins';
+    margin-top: 15px;
+}
+/* Сделала настроки для логотипа */
+.logo{
+    margin-top: 28px;
+    margin-left: 150px;
+}
+/* Настроки ссылок */
+.menu a{
+    font-family: 'Karla';
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
-    line-height: 16px;
-    color: #444444;
-    color: rgb(0, 0, 0);
-    opacity: 0.6;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1D1F2E;
     text-decoration: none;
     transition: all .02s ease-in-out;
-    }
-    .menu_link a:hover {
     opacity: 1;
-    }
-    
-    /*ИНТРО*/
-    .intro{
-    width: 100%;
-    height: 774px;
-    background: url('../img/main2.png') no-repeat center center / cover;
-    }
-    .container{
-    width: 1200px;
-    margin: 0 auto;
-    }
-    .intro_wrapper {
-    height: 776px;
-    display: flex;
-    align-items: center;
-    }
-    .intro_logo{
-    width: 128px;
-    height: 103px;
-    margin-left: 550px;
-    margin-top: -74px;
-    }
-    .intro_text{
-    width: 525px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 45px;
-    text-align: center;
-    color: #45525B;
-    margin-bottom: -200px;
-    margin-left: -330px;
-    }
-    
-    .intro_vniz{
-    width: 64px;
-    animation: 2s linear 1s infinite alternate slidein;
-    margin-left: -300px;
-    margin-top: 500px;
-    }
-    @keyframes slidein { from { margin-bottom: -5%; } to { margin-bottom: 0%; }  }
-
-    /*ABOUT US*/
-    .about{
-    padding: 100px 0;
-    background-color:#FAFAFC;
-    height: 486px;
-    }
-    .container{
-    width: 1200px;
-    margin: 0 auto;
-    }
-    .text_zag{
-    height: 175px;
-    }
-    .about_text{
-    height: 20px;
-    color: #FF8A63;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    }
-    .about_zagolovok{
-    height: 159px;
-    color: #45525B;
-    top: 11.5px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 53px;
-    }
-    .text_info{
-    height: 286px;
-    margin-left: 600px;
-    margin-top: -200px;
-    }
-    .about_info{
-    height: 112px;
-    color: #333333;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    
-    }
-    .about_info2{
-    height: 68px;
-    color: #333333;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    }
-    
-    .ava_info{
-    height: 80px;
-    display: flex;
-    margin-left: 600px;
-    margin-top: -90px;
-    }
-    .about_ava{
-    height: 80px;
-    }
-    .text_ava{
-    height: 38px;
-    margin-top: 18px;
-    margin-left: 10px;
-    }
-    .text_name{
-    height: 23px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: #45525B;
-    }
-    .text_who{
-    height: 17px;
-    font-family: 'Poppins';
+}
+.menu:hover{
+    opacity: 0.6;
+}
+.menu1 a{
+    font-family: 'Karla';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
-    line-height: 17px;
+    line-height: 18px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #6F7278;
-    }
-    
-    /*ALGORITM*/
-    .algoritm{
-    height: 900px;
-    }
-    .container{
-    width: 1200px;
-    margin: 0 auto;
-    }
-    .text_algorimt{
-    text-align: center;
-    height: 114px;
-    margin-top: -88px;
-    }
-    .text_out{
-    height: 20px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    text-align: center;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #FF8A63;
-    text-align: center;
-    height: 114px;
-    margin-top: 100px;
-    }
-    .text_how{
-    width: 499px;
-    height: 44px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 43px;
-    text-align: center;
-    color: #45525B;
-    margin-left: 350px;
-    }
-    .text_lorem{
-    width: 561px;
-    height: 44px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    text-align: center;
-    color: #6F7278;
-    margin-left: 320px;
-    margin-top: 10px;
-    }
-    /*ИЗОБРАЖЕНИЕ*/
-    .algoritm_block{
-    height: 587.52px;
-    display: flex;
-    }
-    .algoritm_img{
-    height: 588px;
-    border-radius: 30px;
-    margin-left: 136px;
-    margin-top: 20px;
-    }
-    
-    /*СПИСОК С ИКОНКАМИ*/
-    .algoritm_block_text{
-    height: 561px;
-    margin-left: 50px;
-    margin-top: 50px;
-    }
-    /*1*/
-    .block_punkt{
-    height: 167px;
-    width: 300px;
-    border: solid 1px transparent;
-    }
-    .block_punkt:hover{
-    background-color: #FAFAFC;
-    border: solid 1px #CACCD1;
-    border-radius: 10px;
-    }
-    .block_arka:hover{
-    background-color: #FAFAFC;
-    border: solid 1px #CACCD1;
-    border-radius: 10px;
-    }
-    .block_styl:hover{
-    background-color: #FAFAFC;
-    border: solid 1px #CACCD1;
-    border-radius: 10px;
-    }
-    .punkt_img{
-    height: 48px;
-    margin-top: 21px;
-    margin-left: 21px;
-    }
-    .text_punkt{
-    height: 67px;
-    margin-left: 21px;
-    margin-top: 10px;
-    }
-    .text_stellar{
-    height: 20px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #45525B;
-    }
-    .text_lorem_stellar{
-    height: 40px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    color: #6F7278;
-    }
-    /*2*/
-    .block_arka{
-    height: 167px;
-    margin-top: 30px;
-    border: solid 1px transparent;
-    }
-    .arka_img{
-    height: 48px;
-    margin-top: 21px;
-    margin-left: 21px;
-    }
-    .text_arka{
-    height: 67px;
-    margin-top: 9px;
-    margin-left: 21px;
-    }
-    .text_high{
-    height: 20px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #45525B;
-    }
-    .text_lorem_high{
-    height: 40px;
-    top: calc(50% - 40px/2 + 4.25px);
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    color: #6F7278;
-    }
-    /*3*/
-    .block_styl{
-    height: 167px;
-    margin-top: 30px;
-    border: solid 1px transparent;
-    }
-    .styl_img{
-    height: 48px;
-    margin-top: 21px;
-    margin-left: 21px;
-    }
-    .text_styl{
-    height: 67px;
-    margin-top: 9px;
-    margin-left: 21px;
-    }
-    .text_expert{
-    height: 20px;
-    top: calc(50% - 20px/2 - 24.75px);
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #45525B;
-    }
-    .text_lorem_expert{
-    height: 40px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    color: #6F7278;
-    }
-    
-    /*FRAME*/
-    .frame{
-    height: 700px;
-    background: url('../img/dom.png') no-repeat center center / cover;
-    }
-    .container{
-    width: 1200px;
-    margin: 0 auto;
-    height: 700px;
-    }
-    .text__frame{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #45525B;
-    }
-    .frame__text{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: #292C32;
-    margin-top: 10px;
-    }
-    .text__frame2{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 21px;
-    color: #45525B;
-    }
-    .frame_wrapper{
-        height: 600px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-    .text__img__frame{
-        width: 300px;
-        align-items: center;
-        visibility: hidden;
-    }
-    .frame_wrapper:hover>.text__img__frame{
-        visibility: visible;
-    }
-
-    /*МЕСТА*/
-    .mesto{
-    height: 1304px;
-    padding: 100px 0;
-    background-color: #FAFAFC;
-    }
-    .container{
-    width: 1200px;
-    margin: 0 auto;
-    }
-    .text_mesto{
-    text-align: left;
-    height: 135px;
-    margin-left: 20px;
-    }
-    .text_current{
-    height: 20px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #FF8A63;
-    }
-    .text_what{
-    height: 44px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 43px;
-    color: #45525B;
-    }
-    .text_morbi{
-    height: 65px;
-    margin-top: 10px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    color: #6F7278;
-    }
-    /*ВИДЫ МЕСТ*/
-    .info_mesto{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin-top: 60px;
-    }
-    .info_photo{
-    width: 100px;
-    margin-top: -30px;
-    }
-    .block_house{
-    height: 118px;
-    margin-left: -100px;
-    width: 379px;
-    background: #FFFF;
-    margin-top: 351px;
-    border: solid 1px transparent;
-    border-radius: 10px;
-    }
-    .text_house{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 17px;
-    text-align: center;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #6F7278;
-    margin-left: -20px;
-    margin-top: 20px;
-    }
-    .info_text_home{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
-    text-align: center;
-    color: #45525B;
-    margin-top: 0px;
-    margin-left: -20px;
-    }
-    .img__mesto__text{
-    display: flex;
-    }
-    .mesto__img__text{
-    display: flex;
-    margin-top: 10px;
-    }
-    .text__mesto1{
-    margin-left: 10px;
-    }
-    .img__mesto{
-    margin-left: 20px;
-    }
-    .block_house1{
-    height: 118px;
-    margin-left: -100px;
-    width: 379px;
-    background: #FFFF;
-    margin-top: 351px;
-    border: solid 1px transparent;
-    border-radius: 10px;
-    }
-    .info_mesto:hover{
-    border: solid 1px #CACCD1;
-    border-radius: 10px;
-    }
-    .block_house:hover{
-    border: solid 1px #CACCD1;
-    border-radius: 10px;
-    }
-    .info_mesto1{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin-top: 60px;
-    margin-left: 30px;
-    }
-    .mesto__info{
-    display: flex;
-    margin-top: -100px;
-    margin-left: 20px;
-    }
-    .text__mesto2{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 21px;
-    color: #45525B;
-    }
-    .text__img{
-    display: flex;
-    margin-top: 620px;
-    margin-left: -680px;
+    color: #1D1F2E;
     text-decoration: none;
-    }
-    /*PEOPLE*/
-    .people{
-    padding: 100px 0;
-    margin-top: 0px;
-    }
-    .container{
-    width: 1200px;
-    margin: 0 auto;
-    height: 300px;
-    }
-    .text_people{
-    height: 284.09px;
-    margin-left: 0%;
-    right: 68.49%;
-    margin-top: 0px;
-    }
-    .text_ourpeople{
-    height: 20px;
-    margin-left: 0%;
-    right: 71.47%;
-    margin-top: -0.98px;
-    font-family: 'Poppins';
+    transition: all .02s ease-in-out;
+    opacity: 1;
+}
+.menu1:hover{
+    opacity: 0.6;
+}
+.menu1{
+    margin-left: 30px;
+}
+.img__menu{
+    margin-left: 50px;
+}
+.menu5 a{
+    font-family: 'Karla';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 18px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #FF8A63;
-    }
-    .text_meet{
-    height: 130px;
-    margin-left: 0%;
-    margin-top: -3px;
-    font-family: 'Poppins';
+    color: #1D1F2E;
+    text-decoration: none;
+    transition: all .02s ease-in-out;
+    opacity: 1;
+    margin-left: 10px;
+}
+.menu5:hover{
+    opacity: 0.6;
+}
+.text__menu{
+    margin-left: 20px;
+    background: #1D1F2E;
+    border-radius: 10px;
+    width: 22px;
+    height: 20px; 
+}
+.text__main{
+    font-family: 'Karla';
     font-style: normal;
     font-weight: 400;
-    font-size: 36px;
-    line-height: 43px;
-    color: #45525B;
+    font-size: 11px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+}
+/*INTRO*/
+.intro{
+    height: 530px;
     }
-    .text_morbipeople{
-    height: 87px;
-    margin-left: 0%;
-    margin-top: 12px;
-    font-family: 'Poppins';
+    /* Сделала настройки для блока секции, текста и кнопки */
+    .wrapper{
+    margin: 0 auto;
+    width: 1380px;
+    height: 721px;
+    }
+    .zagolovok_intro{
+    height: 128px;
+    width: 794px;
+    margin-left: 300px;
+    margin-top: -373px
+    }
+    .intro_best{
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    }
+    .intro_mugs{
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 47px;
+    line-height: 60px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 10px;
+    }
+    .intro_most{
+    font-family: 'Karla';
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
-    line-height: 22px;
-    color: #6F7278;
-    }
-    .text__view{
-    height: 21px;
-    margin-left: 0%;
-    margin-top: 20px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 21px;
-    color: #45525B;
-    }
-    .people__img{
-    margin-left: 120px;
-    margin-top: -19.1px;
-    }
-    .ava_info1{
-    height: 80px;
-    display: flex;
-    }
-    .about_ava{
-    height: 80px;
-    }
-    .text_ava{
-    height: 38px;
-    margin-top: 18px;
-    margin-left: 10px;
-    }
-    .text_name{
-    height: 23px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: #45525B;
-    }
-    .text_who{
-    height: 17px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 17px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #6F7278;
-    }
-    .ava_info2{
-    height: 80px;
-    display: flex;
-    margin-left: 150px;
-    }
-    .about_ava{
-    height: 80px;
-    }
-    .text_ava{
-    height: 38px;
-    margin-top: 18px;
-    margin-left: 10px;
-    }
-    .text_name{
-    height: 23px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-     color: #45525B;
-    }
-    .text_who{
-    height: 17px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 17px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #6F7278;
-    }
-    .ava__people{
-    display: flex;
-    margin-left: 450px;
-    margin-top: -270px;
-    }
-    .ava__people1{
-    display: flex;
-    margin-left: 450px;
-    margin-top: 10px;
-    }
-    .ava_info3{
-    height: 80px;
-    display: flex;
-    margin-left: 211px;
-    }
-    .ava_info4{
-    height: 80px;
-    display: flex;
-    margin-left: 180px;
-    }
-    .line__people{
-    text-decoration: none;
-    }
-    /*Newsroom*/
-    .newsroom{
-    height: 715px;
-    padding: 100px 0;
-    background: #FAFAFC;
-    }
-    .container{
-    width: 1200px;
-    margin: 0 auto;
-    height: 300px;
-    }
-    .zagol_newsroom{
-    margin-left: 25px;
-    text-align: center;
-    margin-top: 0px;
-    }
-    .text_new{
-    width: 102px;
-    margin-left: 530px;
-    margin-top: -1.08px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    text-align: center;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #FF8A63;
-    }
-    .text_writing{
-    width: 354px;
-    height: 44px;
-    margin-left: 405px;
-    margin-top: 0px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 43px;
-    text-align: center;
-    color: #45525B;
-    }
-    .mesto_newsroom{
-    display: flex;
-    margin-top: -100px;
-    margin-left: -25px;
-    }
-    .info_newsroom{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin-top: 60px;
-    margin-left: 30px;
-    }
-    .info_newsroom_2{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin-top: 60px;
-    margin-left: 30px;
-    }
-    .newsroom_photo{
-    width: 100px;
-    margin-top: -30px;
-    }
-    .text_newsroom{
-    height: 165px;
-    margin-left: -100px;
-    width: 376px;
-    background: #FFFF;
-    margin-top: 340px;
-    border-radius: 10px;
-    }
-    .text_newsroom_2{
-    height: 165px;
-    margin-left: -100px;
-    width: 376px;
-    background: #FFFF;
-    margin-top: 340px;
-    border-radius: 10px;
-    }
-    .text_newsroom:hover{
-    border-radius: 10px;
-    border: solid 1px #CACCD1;
-    }
-    .text_newsroom_2:hover{
-    border-radius: 10px;
-    border: solid 1px #CACCD1;
-    }
-    .text_press{
-    text-align: left;
-    margin-left: 30px;
-    margin-top: 25px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 17px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #FF8A63;
-    }
-    .text_market{
-    text-align: left;
-    margin-left: 30px;
-    margin-top: 10px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    color: #45525B;
-    }
-    .text_data{
-    text-align: left;
-    margin-left: 30px;
-    margin-top: 27px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 20px;
-    color: #6F7278;
-    }
-    .text__img_newsroom{
-    display: flex;
-    margin-top: 30px;
-    margin-left: 535px;
-    text-decoration: none;
-    }
-    .text__newsroom_2{
-    height: 21px;
-    margin-left: 0px;
-    margin-top: -0.39px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 21px;
-    color: #45525B;
-    }
-    /*ПРИFOOTER*/
-.prifooter{
-    height: 400px;
-    padding: 100px 0;
-    background: #45525B;
-    }
-    .container{
-    width: 1200px;
-    margin: 0 auto;
-    height: 300px;
-    }
-    .text_prifooter{
-    height: 135px;
-    margin-left: 0px;
-    margin-top: 0px;
-    }
-    .text_vopros{
-    width: 129px;
-    height: 20px;
-    margin-left: 535px;
-    margin-top: -1.48px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    text-align: center;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #FAFAFC;
-    }
-    .text_get{
-    margin-left: 375px;
-    margin-top: 14px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 43px;
+    line-height: 30px;
     text-align: center;
     color: #FFFFFF;
+    margin-top: 10px;
     }
-    .text_morbineque{
-    width: 574px;
-    height: 65px;
-    margin-left: 330px;
-    margin-top: 11px;
-    font-family: 'Poppins';
+    /* Сделала редактирование для кнопки */
+    /*кнопка*/
+    .bth_explore{
+    height: 33px;
+    width: 231px;
+    background: #FFFFFF;
+    border: #FFFFFF;
+    cursor: pointer;
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1D1F2E;
+    margin-left: 565px;
+    margin-top: 38px;
+    }
+    .bth_explore:hover{
+    background-color: antiquewhite;
+    }
+  /*ABOUT*/
+.about{
+    height: 350px;
+    }
+    /* Сделала настройки для текста и ссылки */
+    .zagolovok_about{
+    height: 274px;
+    width: 658px;
+    margin-left: 440px;
+    margin-top: 123px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    }
+    .about_even{
+    font-family: 'Karla';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 28px;
+    line-height: 40px;
     text-align: center;
-    color: #FAFAFC;
+    color: #1D1F2E;
     }
-    /*КНОПКИ*/
-    .button{
-    margin-left: 380px;
-    margin-top: 25px;
-    }
-    .button_contact{
-    width: 102px;
-    height: 44px;
-    margin-left: 102px;
-    margin-top: 0px;
-    border: #FFFF;
-    border-radius: 6px;
-    cursor: pointer;
-    }
-    .text_contact{
-    width: 66px;
-    height: 23px;
-    padding: 0px;
-    margin-left: 15px;
-    margin-bottom: 2px;
-    font-family: 'Poppins';
+    .about_it{
+    font-family: 'Karla';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 28px;
     text-align: center;
-    color: #45525B;
+    color: rgba(29, 31, 46, 0.7);
+    margin-top: 16px;
     }
-    .button_see{
-    width: 122px;
-    height: 44px;
-    margin-left: 20px;
-    margin-top: 0px;
-    border-radius: 6px;
-    border:  #FFFFFF;
-    cursor: pointer;
+    .about_text{
+    text-decoration: none;
     }
-    .text_see{
-    width: 86px;
-    height: 23px;
-    padding: 0px;
-    margin-left: 15px;
-    margin-bottom: 2px;
-    font-family: 'Poppins';
+    .about_read{
+    font-family: 'Karla';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
-    line-height: 22px;
+    line-height: 28px;
     text-align: center;
-    color: #45525B;
+    color: #A25F4B;
+    margin-top: 21px;
     }
-    /* FOOTER */
-    .footer{
-    background: #292C32;
-    height: 563px;
+    .about_read:hover{
+    color:black;
     }
-    .footer__container{
-    width: 1200px;
-    height: 563px;
+    .img_line_pink{
+    margin-top: -15px;
+    }
+    /* Featured */
+    .featured{
+        height: 869px;
+    }
+    /* Сделала настрокий для текста и блоков */
+    .featured__wrapper{
+        width: 940px;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .text__feat{
+        display: flex;
+        margin-left: 374px;
+    }
+    .text__featu{
+        margin: 0 15px;
+        font-family: 'Karla';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #1D1F2E;
+    }
+    .img__coffee{
+        display: flex;
+        margin-top: 100px;
+    }
+    .text__coffee1{
+        margin-left: 10px;
+    }
+    .text__coffee1:hover{
+        box-shadow: 0 0 5px rgb(0 0 0);
+        transition: background-color ease 0.5s;
+        cursor: pointer;
+    }
+    .text__coffee:hover{
+        box-shadow: 0 0 5px rgb(0 0 0);
+        transition: background-color ease 0.5s;
+        cursor: pointer;
+    }
+    .text__coffee2{
+        font-family: 'Karla';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+        color: #1D1F2E;
+        margin-top: 35px;
+    }
+    .cena__coffe{
+        font-family: 'Karla';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center;
+        color: rgba(29, 31, 46, 0.7);
+        margin-top: 5px;
+    }
+    .cena__coff{
+        font-family: 'Karla';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 32px;
+        text-align: center;
+        color: #A25F4B;
+        margin-top: 5px;
+    }
+    .cena__coffee{
+        font-family: 'Karla';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center;
+        text-decoration-line: line-through;
+        color: rgba(29, 31, 46, 0.4);
+    }
+    /* Products */
+    .products{
+        height: 1845px;
+    }
+    /* Сделала настройки для текста и блоков */
+    .products__wrapper{
+        height: 1633px;
+        width: 960px;
+        margin:0 auto;
+    }
+    .img__coffee1{
+        display: flex;
+        margin-top: 50px;
+    }
+    /* Kartinka */
+    /* Добавила фон секции */
+    .kartinka__wrapper{
+        height: 340px;
+    }
+    /* Behind */
+    .behind{
+        height: 865px;
+    }
+    /* Сделала настроки текста и блоков */
+    .behind__wrapper{
+        margin: 0 auto;
+        width: 940px;
+        height: 721px;
+        margin-top: 100px;
+    }
+    .text__behind{
+        display: flex;
+        margin-left: 282px;
+    }
+    .behid__text{
+        font-family: 'Karla';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 32px;
+        color: #1D1F2E;
+        margin-top: 25px;
+    }
+    .text__behind2{
+        font-family: 'Karla';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        color: rgba(29, 31, 46, 0.7);
+        margin-top: 14px;
+    }
+    .text__data{
+        font-family: 'Karla';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #1D1F2E;
+        margin-top: 16px;
+    }
+    .text__behind3{
+        margin-left: 20px;
+    }
+    /*SHOP*/
+.shop{
+    height: 560px;
+    }
+    .wrapper_shop{
+    width: 1240px;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-top: 50px;
+    }
+    /* Сделала настройки для текста */
+    .text_shop{
+    display: flex;
+    margin-left: 415px;
+    }
+    .text_shop_buy{
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1D1F2E;
+    margin: 0 15px;
+    }
+    /* Сделала настроки для блока с картинками */
+    .block_shop{
+    height: 280px;
+    margin-left: 0px;
+    margin-top: 32px;
+    }
+    .magazine{
+    display: flex;
+    margin-left: -90px;
+    }
+    .img_three{
+    height: 280px;
+    margin-left: 250px;
+    margin-top: 100px;
+    }
+    .shop_img{
+    height: 280px;
+    margin-left: 20px;
+    margin-top: 100px;
+    }
+    .img_coffee2{
+    margin-top: 17px;
+    }
+    /* Сделала настроки текста */
+    .zagolovok_shop{
+    height: 199px;
+    margin-left: 720px;
+    margin-top: -183px;
+    }
+    .shop_prem{
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1D1F2E;
+    }
+    .shop_get{
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 50px;
+    color: #1D1F2E;
+    margin-top: 25px;
+    }
+    .shop_most{
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: rgba(29, 31, 46, 0.7);
+    margin-top: 25px;
+    }
+    /* Сделала редактирование кнопки */
+    /*кнопка*/
+    .bth_shop{
+    height: 35px;
+    width: 173px;
+    margin-left: 720px;
+    margin-top: 50px;
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #1D1F2E;
+    border: #1D1F2E;
+    cursor: pointer;
+    }
+    .bth_shop:hover{
+    background-color: antiquewhite;
+    color: #1D1F2E;
+    }
+    /*BLOG*/
+.blog{
+    height: 327px;
     margin: 0 auto;
     }
-    .img__footer{
-    margin-left: 510px;
+    /* Сделала фон секции */
+    .wrapper_blog{
+    width: 1380px;
+    margin: 0 auto;
+    background: #1D1F2E;
+    height: 377px;
+    }
+    .zagolovok_blog{
+    margin-left: 0px;
+    text-align: center;
     padding-top: 100px;
     }
-    .footer__text{
-    font-family: 'Poppins';
+    /* Сделала настроки для текста */
+    .text_blog{
+    display: flex;
+    margin-left: 540px;
+    }
+    .blog_sign{
+    font-family: 'Karla';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
     letter-spacing: 2px;
-    color: #FF8A63;
-    }
-    .footer__text1{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
+    text-transform: uppercase;
     color: #FFFFFF;
-    text-decoration: none; 
-    margin-top: 10px;
     }
-    .text__footer{
-    display: grid;
-    margin-left: 140px;
-    margin-top: 90px;
-    }
-    .text__footer2{
-    display: grid;
-    margin-left: 370px;
-    margin-top: -180px;
-    }
-    .text__footer3{
-    display: grid;
-    margin-left: 610px;
-    margin-top: -115px;
-    }
-    .footer__text3{
-    font-family: 'Poppins';
+    .blog_updates{
+    font-family: 'Karla';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: #FAFAFC;
+    font-size: 36px;
+    line-height: 50px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 15px;
+    margin-left: 25px;
+    }
+    /* Сделала настройки для кнопки и input */
+    .bth_email{
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+    
     }
     .text__input__box{
-    background: #F9FAFB;
-    border: 1px solid #E5E7EB;
+    border: 1px solid #2F303E;
     box-sizing: border-box;
-    border-radius: 8px;
-    height: 53px;
-    width: 458px;
+    border-radius: 0px;
+    width: 350px;
+    height: 54px;
+    background-color: #1D1F2E;
+    padding: 20px;
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
     }
     .text__input__box::placeholder{
-    font-family: 'Poppins';
+    font-family: 'Karla';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: #6F7278;
-    padding-left: 34px;
-    }
-    .btn__footer{
-    background: #3A4443;
-    border-radius: 10px;
-    height: 39px;
-    width: 83px;
-    border: #3A4443;
-    margin-left: -74px;
-    margin-top: 7px;
-    }
-    .text__btn{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     color: #FFFFFF;
+    }
+    .bth_subscribe{
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #000000;
+    width: 129px;
+    height: 54px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 6px rgba(29, 31, 46, 0.1);
+    border:#FFFFFF;
     cursor: pointer;
+    margin-left: 10px;
     }
-    .text__footer__input{
-    margin-left: 840px;
-    margin-top: -180px;
+    .bth_subscribe:hover{
+    background-color: antiquewhite;
+    color: #1D1F2E;
     }
-    .btn__input{
-    margin-top: 10px;
-    display: flex;
+    /* Footer */
+    .footer{
+        height: 361px;
     }
-    .img__footer1{
-    display: flex;
-    margin-left: 1040px;
-    margin-top: 49px;
+    .footer__wrapper{
+        height: 204px;
+        width: 940px;
+        margin: 0 auto;
+        display: flex;
+        padding-top: 100px;
     }
-    .img__in{
-    margin-right: 20px;
+    /* Сделала настроки для блоков с ссылками */
+    .menu__stolb{
+        display: grid;
     }
-    .img__in:hover{
-    transform: scale(1.2);
-    transition: all 0.3s ease;
+    .menu__stolb1{
+        display: grid;
     }
-    .img__facebook{
-    margin-right: 20px;
+    .menu__text{
+        font-family: 'Karla';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 22px;
+        color: rgba(29, 31, 46, 0.7);
+        text-decoration: none;
+        margin-top: 23px;
     }
-    .img__facebook:hover{
-    transform: scale(1.2);
-    transition: all 0.3s ease;
+    .menu__text1{
+        font-family: 'Karla';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 22px;
+        color: rgba(29, 31, 46, 0.7);
+        text-decoration: none;
+        margin-top: 10px;
     }
-    .img__inst{
-    margin-right: 20px;
+    .text__menu2{
+        font-family: 'Karla';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #1D1F2E;
     }
-    .img__inst:hover{
-    transform: scale(1.2);
-    transition: all 0.3s ease;
+    /* Сделала настройки для текста */
+    .text__footer{
+        font-family: 'Karla';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: rgba(29, 31, 46, 0.7);
+        margin-top: 22px;
     }
-    .img__twitter:hover{
-    transform: scale(1.2);
-    transition: all 0.3s ease;
+    .footer__text{
+        font-family: 'Karla';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: rgba(29, 31, 46, 0.3);
+        margin-top: 82px;
     }
-    .text__footer4{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: #FFFFFF;
-    margin-left: 136px;
-    margin-top: -20px;
+    .menu__footer{
+        margin-left: 55px;
+    }
+    .follow__footer{
+        margin-left: 79px;
+    }
+    /* Настройки для блока с контактами */
+    .mail__text{
+        margin-left: 83px;
+    }
+    .contact__text{
+        font-family: 'Karla';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #1D1F2E;
+    }
+    .text__mail{
+        font-family: 'Karla';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: rgba(29, 31, 46, 0.7);
+        margin-top: 23px;
+    }
+    .us__footer{
+        font-family: 'Karla';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 36px;
+        color: #1D1F2E;
+        margin-top: 15px;
+    }
+    .powered__text{
+        font-family: 'Karla';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: rgba(29, 31, 46, 0.3);
+        margin-top: 54px;
     }
